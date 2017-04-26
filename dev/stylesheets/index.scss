@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:100,300,400,500,700,900');
+$purple: purple;
+
+
+/*MEDIA QUERIES*/
+
+@media only screen and (min-width: 700px) {
+    .MediaQuery-mobile{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .MediaQuery-desktop{
+        display: none;
+    }
+}
+
+
+/*GENERAL*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+hr {
+	width: 90vw;
+	color: #ddd;
+  background-color: #ddd;
+  border: none;
+  height: 1px;
+	margin: 15px;
+}
+
+
+/*HEADER*/
+.header {
+	margin-top: 30px;
+}
+
+.header h1 {
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	letter-spacing: 7px;
+	text-align: center;
+}
+
+h1.desktop {
+	font-size: 30px;
+}
+
+h1.mobile {
+	font-size: 20px;
+}
+
+
+/*NAV*/
+.navDesktop {
+	margin: 0 auto;
+	display: flex;
+	width: 700px;
+	justify-content: space-around;
+}
+
+.navMobile {
+	width: 200px;
+	margin: 20px auto;
+}
+
+nav {
+	padding: 10px 0;
+	position: relative;
+}
+
+nav:after{
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 3px;
+  display: block;
+  margin-top: 5px;
+  right: 0;
+  background: $purple;
+  transition: width .3s ease;
+  -webkit-transition: width .3s ease;
+}
+
+nav:hover:after{
+  width: 100%;
+  left: 0;
+  background: $purple;
+}
+
+.navDesktop a {
+	text-decoration: none;
+	color: gray;
+	font-size: 16px;
+	font-weight: 300;
+	letter-spacing: 1px;
+	padding-bottom: 5px;
+}
+
+
+/*ACCORDION MENU*/
+.accordion {
+  background-color: white;
+  
+  &-heading {
+    margin: 10px;
+    background-color: white;
+    font-size: 1.2em;
+    
+    a {
+      position: relative;
+      display: block;
+      padding: 20px;
+      color: #000;
+      text-decoration: none; 
+      
+      &:before,
+      &:after {
+        position: absolute;
+        display: block;
+        left: 75px;
+        content: '';
+        width: 24px;
+        height: 2px;
+        background-color: #000;
+      }
+      
+      &:before {
+        top: 50%;
+      }
+      
+      &:after {
+        top: 50%;
+        transform: rotate(90deg);
+        
+        .accordion-open & {
+          display: none;
+        }
+      }
+    }
+    
+    .accordion-open & {
+      background-color: white;
+    }
+  }
+  
+  &-content {
+    overflow: hidden;
+    height: 0;
+    
+    .accordion-open & {
+      height: auto;
+    }
+  }
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.data {
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.data .aLink {
+	text-decoration: none;
+	color: gray;
+	font-size: 16px;
+	font-weight: 200;
+}
+
+
+/*HOME BODY*/
+.homeImage {
+	width: 80vw;
+	margin: 30px auto;
+	overflow: hidden;
+}
+
+.homeImage img {
+	width: 80vw;
+}
+
+/*FOOTER*/
+.footer {
+	margin: 25px auto;
+	width: 90vw;
+	color: #bbb;
+	font-size: 12px;
+	text-align: right;
+}
+
+
+/*PAINTINGS*/
+.paintingsContainer {
+	width: 80vw;
+	margin: 30px auto;
+}
+
+
+/*DRAWINGS*/
+.drawingsContainer {
+	width: 80vw;
+	margin: 30px auto;
+}
+
+
+/*ABOUT*/
+.aboutContainer {
+	width: 80vw;
+	margin: 30px auto;
+}
+
+/*ACTIVE LINKS*/
+.active {
+	border-bottom: 3px solid $purple;
+}
+
+.activeMobile {
+	font-weight: 600 !important;
+}
