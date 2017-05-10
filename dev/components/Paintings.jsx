@@ -3,6 +3,18 @@ import Gallery from 'react-grid-gallery';
 
 const IMAGES =
 [{
+        src: "https://image.ibb.co/hrCJmQ/blue.jpg",
+        thumbnail: "https://image.ibb.co/k3L4RQ/blue_sm.jpg",
+        thumbnailWidth: 263,
+        thumbnailHeight: 350,
+},
+{
+        src: "https://image.ibb.co/h1E9t5/red.jpg",
+        thumbnail: "https://image.ibb.co/fCRND5/red_sm.jpg",
+        thumbnailWidth: 263,
+        thumbnailHeight: 350,
+},
+{
         src: "https://image.ibb.co/bSThAk/pink.jpg",
         thumbnail: "https://image.ibb.co/hMrPO5/pink_sm.jpg",
         thumbnailWidth: 263,

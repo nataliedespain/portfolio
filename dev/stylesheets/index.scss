@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Roboto:100,300,400,500,700,900');
-$purple: purple;
+$underline: gray;
 
 
 /*MEDIA QUERIES*/
@@ -82,7 +82,7 @@ nav:after{
   display: block;
   margin-top: 5px;
   right: 0;
-  background: $purple;
+  background: $underline;
   transition: width .3s ease;
   -webkit-transition: width .3s ease;
 }
@@ -90,7 +90,7 @@ nav:after{
 nav:hover:after{
   width: 100%;
   left: 0;
-  background: $purple;
+  background: $underline;
 }
 
 .navDesktop a {
@@ -221,9 +221,12 @@ nav:hover:after{
 
 /*ACTIVE LINKS*/
 .active {
-	border-bottom: 3px solid $purple;
+	border-bottom: 3px solid $underline;
 }
 
 .activeMobile {
 	font-weight: 600 !important;
 }
+
+
+
